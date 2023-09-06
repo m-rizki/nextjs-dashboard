@@ -19,13 +19,13 @@ const PaginationControls = ({ total }: PaginationControlsProps) => {
 
   const handlePrev = () => {
     const newSkip = (current_page - 2) * Number(limit);
-    router.refresh()
+    router.refresh();
     router.push(`/products?limit=${limit}&skip=${newSkip}`);
   };
 
   const handleNext = () => {
     const newSkip = current_page * Number(limit);
-    router.refresh()
+    router.refresh();
     router.push(`/products?limit=${limit}&skip=${newSkip}`);
   };
 

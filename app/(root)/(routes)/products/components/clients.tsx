@@ -7,10 +7,9 @@ import { DataTable } from "@/components/ui/data-table";
 import { columns } from "./columns";
 import PaginationControls from "@/components/ui/pagination-controls";
 
-
 interface ProductsClientProps {
   data: ProductColumns[];
-  total: number,
+  total: number;
 }
 
 const ProductsClient = ({ data, total }: ProductsClientProps) => {
@@ -18,11 +17,11 @@ const ProductsClient = ({ data, total }: ProductsClientProps) => {
   const params = useParams();
 
   return (
-    <>
-      <DataTable columns={columns} data={data}/>
-      <PaginationControls total={total}/>
-    </>
-  )
+    <div>
+      <DataTable columns={columns} data={data} />
+      <PaginationControls total={total} />
+    </div>
+  );
 };
 
 export default ProductsClient;
