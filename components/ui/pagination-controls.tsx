@@ -17,16 +17,15 @@ const PaginationControls = ({ total }: PaginationControlsProps) => {
   const total_page = Math.ceil(Number(total) / Number(limit));
   const current_page = Math.floor(Number(skip) / Number(limit)) + 1;
 
-  // FIXME: Handler pagination not worked
   const handlePrev = () => {
     const newSkip = (current_page - 2) * Number(limit);
-    router.refresh();
+    router.refresh()
     router.push(`/products?limit=${limit}&skip=${newSkip}`);
   };
 
   const handleNext = () => {
     const newSkip = current_page * Number(limit);
-    router.refresh();
+    router.refresh()
     router.push(`/products?limit=${limit}&skip=${newSkip}`);
   };
 
