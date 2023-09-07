@@ -1,3 +1,10 @@
+export interface ProductsPageProps {
+  searchParams: {
+    limit: string;
+    skip: string;
+  };
+}
+
 export type ProductColumns = {
   id: number;
   title: string;

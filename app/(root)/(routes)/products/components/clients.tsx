@@ -1,9 +1,9 @@
 "use client";
 
-import { ProductColumns } from "@/types";
 import { DataTable } from "@/components/data-table/data-table";
 import { columns } from "./columns";
 import PaginationControls from "@/components/ui/pagination-controls";
+import { ProductColumns } from "@/types/products";
 
 interface ProductsClientProps {
   data: ProductColumns[];

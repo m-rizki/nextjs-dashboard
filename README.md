@@ -14,12 +14,12 @@ This is a [Next.js](https://nextjs.org/) Dashboard Page Collection project boots
 ## Features
 
 - [x] Dashboard UI
-- [x] Module E-commerce : Products, table, Server Side Pagination
-- [ ] Module E-commerce : Filter Products (Brand, Product, Price Range & Category)
-- [ ] Module E-commerce : Search Products (Product Name)
-- [ ] Module E-commerce : Autosave filter & search
-- [ ] Module E-commerce : Chart -number of items per Product
-- [ ] Module E-commerce : Carts (table with pagination)
+- [x] Module E-commerce : Products, table with Server Side Pagination
+- [ ] Module E-commerce : Carts, table with Server Side Pagination
+- [ ] Module E-commerce : page products - Filter Products (Brand, Product, Price Range & Category)
+- [ ] Module E-commerce : page products - Search Products (Product Name)
+- [ ] Module E-commerce : page products - Autosave filter & search
+- [ ] Module E-commerce : page products - Chart - number of items per Product
 
 ## Getting Started
 

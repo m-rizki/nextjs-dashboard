@@ -4,7 +4,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import qs from "query-string";
 
 import { Button } from "@/components/ui/button";
-import { LIMIT } from "@/constants/url";
+import { LIMIT } from "@/constants/url-params";
+import { revalidatePath } from "next/cache";
 
 interface PaginationControlsProps {
   total: number;
