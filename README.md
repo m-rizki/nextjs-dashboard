@@ -2,16 +2,24 @@
 
 This is a [Next.js](https://nextjs.org/) Dashboard Page Collection project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Tech Stack
+
+- React
+- Next.Js
+- TailwindCSS
+- Shadcn UI
+- Tanstack React Table
+- [Dummy API](https://dummyjson.com/)
+
 ## Features
 
 - [x] Dashboard UI
-- [ ] Module E-Commerce : [Dummy API](https://dummyjson.com/) - /products & /carts
-- [ ] Module E-commerce : Products (table with pagination)
-- [ ] Module E-commerce : Filter Products (Brand, Product, Price Range & Category)
-- [ ] Module E-commerce : Search Products (Product Name)
-- [ ] Module E-commerce : Autosave filter & search
-- [ ] Module E-commerce : Chart -number of items per Product
-- [ ] Module E-commerce : Carts (table with pagination)
+- [x] Module E-commerce : Products, table with Server Side Pagination
+- [ ] Module E-commerce : Carts, table with Server Side Pagination
+- [ ] Module E-commerce : page products - Filter Products (Brand, Product, Price Range & Category)
+- [ ] Module E-commerce : page products - Search Products (Product Name)
+- [ ] Module E-commerce : page products - Autosave filter & search
+- [ ] Module E-commerce : page products - Chart - number of items per Product
 
 ## Getting Started
 
