@@ -1,4 +1,5 @@
 import { ProductListResponse } from "@/types";
+import { LIMIT } from "@/constants/url";
 import ProductsClient from "./components/clients";
 
 interface RootPageProps {
@@ -8,24 +9,26 @@ interface RootPageProps {
   };
 }
 
-const getProducts = async (limit: string, skip: string) => {
-  const response = await fetch(
-    `https://dummyjson.com/products?limit=${limit}&skip=${skip}`
-  );
-  if (!response.ok) throw new Error("Failed to fetch Products");
-
-  return response.json();
-};
-
 const ProductsPage = async ({ searchParams }: RootPageProps) => {
-  const data: ProductListResponse = await getProducts(
-    searchParams.limit || "10",
-    searchParams.skip || "0"
+  const productsRes = await fetch(
+    `https://dummyjson.com/products?limit=${
+      searchParams.limit || LIMIT.toString()
+    }&skip=${searchParams.skip || "0"}`
   );
+
+  if (!productsRes.ok) return <p>Failed to fetch Products</p>;
+
+  const productsResData: ProductListResponse = await productsRes.json();
+
+  await new Promise((resolve) => setTimeout(resolve, 300));
+
+  const products = productsResData.products;
+  const total = productsResData.total;
 
   return (
     <div className="h-full p-4 space-y-2">
-      <ProductsClient data={data.products} total={data.total} />
+      {/* TODO: Loading UI every products reevaluated, use server action approach */}
+      <ProductsClient data={products} total={total} />
     </div>
   );
 };

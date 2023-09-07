@@ -1,9 +1,7 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
-
 import { ProductColumns } from "@/types";
-import { DataTable } from "@/components/ui/data-table";
+import { DataTable } from "@/components/data-table/data-table";
 import { columns } from "./columns";
 import PaginationControls from "@/components/ui/pagination-controls";
 
@@ -13,14 +11,11 @@ interface ProductsClientProps {
 }
 
 const ProductsClient = ({ data, total }: ProductsClientProps) => {
-  const router = useRouter();
-  const params = useParams();
-
   return (
-    <div>
+    <>
       <DataTable columns={columns} data={data} />
       <PaginationControls total={total} />
-    </div>
+    </>
   );
 };
 

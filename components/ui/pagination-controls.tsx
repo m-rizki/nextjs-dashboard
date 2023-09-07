@@ -1,7 +1,10 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import qs from "query-string";
+
 import { Button } from "@/components/ui/button";
+import { LIMIT } from "@/constants/url";
 
 interface PaginationControlsProps {
   total: number;
@@ -19,14 +22,28 @@ const PaginationControls = ({ total }: PaginationControlsProps) => {
 
   const handlePrev = () => {
     const newSkip = (current_page - 2) * Number(limit);
-    router.refresh();
-    router.push(`/products?limit=${limit}&skip=${newSkip}`);
+    const query = { skip: newSkip };
+    const url = qs.stringifyUrl(
+      {
+        url: window.location.href,
+        query: query,
+      },
+      { skipNull: true }
+    );
+    router.push(url);
   };
 
   const handleNext = () => {
     const newSkip = current_page * Number(limit);
-    router.refresh();
-    router.push(`/products?limit=${limit}&skip=${newSkip}`);
+    const query = { skip: newSkip, limit: LIMIT };
+    const url = qs.stringifyUrl(
+      {
+        url: window.location.href,
+        query: query,
+      },
+      { skipNull: true }
+    );
+    router.push(url);
   };
 
   return (
