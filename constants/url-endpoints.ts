@@ -11,3 +11,6 @@ export const URL_GET_PRODUCTS_BY_CATEGORY = `${URL_DUMMY_JSON}/products/category
 
 // Carts
 export const URL_GET_CARTS = `${URL_DUMMY_JSON}/carts`
+
+// Users
+export const URL_GET_USER = `${URL_DUMMY_JSON}/users`

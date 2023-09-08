@@ -8,10 +8,10 @@ import { ColumnDef } from "@tanstack/react-table";
 
 export const columns: ColumnDef<CartsColumns>[] = [
   { accessorKey: "id", header: "ID" },
-  { accessorKey: "total", header: "Total" },
-  { accessorKey: "discountedTotal", header: "Discounted Total" },
-  { accessorKey: "totalProducts", header: "Total Products" },
-  { accessorKey: "totalQuantity", header: "Total Quantity" },
+  { accessorKey: "total", header: "Total ($)" },
+  { accessorKey: "discountedTotal", header: "Discounted ($)" },
+  { accessorKey: "totalProducts", header: "Products" },
+  { accessorKey: "totalQuantity", header: "Quantity" },
   {
     id: "actions",
     header: "Actions",
