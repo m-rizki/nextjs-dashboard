@@ -4,6 +4,7 @@ import { URL_GET_CARTS } from "@/constants/url-endpoints";
 import { CartsColumns } from "@/types/carts";
 import { Suspense } from "react";
 import CardDetails from "./components/card-details";
+import ProductsClientTable from "./components/products-client-table";
 
 interface CartDetailPageProps {
   params: {
@@ -28,8 +29,8 @@ const CartDetailPage = async ({ params }: CartDetailPageProps) => {
         </h3>
       </Suspense>
       <SeparatorClient />
-      <CardDetails data={cartResData}/>
-      {/* TODO: Implementation Table with client side pagination */}
+      <CardDetails data={cartResData} />
+      <ProductsClientTable data={cartResData.products} />
     </div>
   );
 };

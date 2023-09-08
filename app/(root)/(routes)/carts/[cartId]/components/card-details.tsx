@@ -24,10 +24,14 @@ const CardDetails = async ({ data }: CartDetailsProps) => {
       </CardHeader>
       <CardContent className="text-xs">
         <div className="sm:grid grid-cols-2 gap-4">
-          <p>User: {user.firstName} {user.lastName}</p>
-          <p># of Items : {data.totalQuantity}</p>
-          <p>AddedOn : (not available on dummyjson API)</p>
-          <p>Total Amount : $ {data.total}</p>
+          <p className="sm:pb-1 pb-2">
+            User: {user.firstName} {user.lastName}
+          </p>
+          <p className="sm:pb-1 pb-2"># of Items : {data.totalQuantity}</p>
+          <p className="sm:pb-1 pb-2">
+            AddedOn : (not available on dummyjson API)
+          </p>
+          <p className="sm:pb-1 pb-2">Total Amount : $ {data.total}</p>
         </div>
       </CardContent>
     </Card>
