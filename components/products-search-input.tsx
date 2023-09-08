@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import { Input } from "@/components/ui/input";
 import { useDebounce } from "@/hooks/use-debounce";
+import { LIMIT, SKIP } from "@/constants/url-params";
 
 interface SearchInputProps {
   placeholder: string;
@@ -29,6 +30,8 @@ const ProductsSearchInput = ({ placeholder }: SearchInputProps) => {
   const handleSearch = useCallback(() => {
     const query = {
       q: debouncedValue,
+      skip: SKIP,
+      limit: LIMIT,
     };
 
     const url = qs.stringifyUrl(
@@ -53,7 +56,7 @@ const ProductsSearchInput = ({ placeholder }: SearchInputProps) => {
         onChange={handleChange}
         value={value}
         placeholder={placeholder}
-        className="pl-10 bg-primary/10 text-xs"
+        className="pl-10 border-black text-xs"
       />
     </div>
   );

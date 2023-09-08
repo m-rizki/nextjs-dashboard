@@ -3,6 +3,7 @@ export interface ProductsPageProps {
     limit: string;
     skip: string;
     q?: string;
+    category?: string;
   };
 }
 
@@ -25,4 +26,4 @@ export interface ProductListResponse {
   total: number;
   skip: number;
   limit: number;
-} 
+}
