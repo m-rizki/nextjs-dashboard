@@ -4,22 +4,22 @@ This is a [Next.js](https://nextjs.org/) Dashboard Page Collection project boots
 
 ## Tech Stack
 
-- React
-- Next.Js
-- TailwindCSS
-- Shadcn UI
-- Tanstack React Table
-- [Dummy API](https://dummyjson.com/)
+- [React](https://react.dev/)
+- [Next.Js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [Tanstack React Table](https://tanstack.com/table/v8)
+- [Dummy API dummyjson.com](https://dummyjson.com/)
 
 ## Features
 
 - [x] Dashboard UI
-- [x] Module E-commerce : Products, table with Server Side Pagination
+- [x] Module E-commerce : Products, data table with Server Side Pagination
 - [x] Module E-commerce : page products - Search Products (Product Name)
 - [x] Module E-commerce : page products - Filter Products category
 - [x] Module E-commerce : page products - Autosave filter & search
-- [x] Module E-commerce : Carts, table with Server Side Pagination
-- [ ] Module E-commerce : Cart Detail
+- [x] Module E-commerce : Carts, data table with Server Side Pagination
+- [x] Module E-commerce : Cart Details
 
 nb: only provide filter by category for now. Not provide filter by Brand, Product, Price Range
 
