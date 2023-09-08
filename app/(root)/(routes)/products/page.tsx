@@ -26,7 +26,11 @@ const ProductsPage = async ({ searchParams }: ProductsPageProps) => {
   }
 
   if (!!searchParams.category) {
-    url = URL_GET_PRODUCTS_BY_CATEGORY + `/${searchParams.category}` + defaultUrlParams + `&q=${searchParams.q}`
+    url =
+      URL_GET_PRODUCTS_BY_CATEGORY +
+      `/${searchParams.category}` +
+      defaultUrlParams +
+      `&q=${searchParams.q}`;
   }
 
   const productsRes = await fetch(url, { cache: "no-cache" });
@@ -40,7 +44,7 @@ const ProductsPage = async ({ searchParams }: ProductsPageProps) => {
     <div className="h-full p-4 space-y-2">
       <h3 className="text-lg font-medium">Products</h3>
       <p className="text-sm text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sequi?
+        The product data was obtained from dummyjson.com.
       </p>
       <Separator className="bg-primary/10" />
       <div className="sm:flex grid justify-end gap-4 py-2">
