@@ -2,6 +2,7 @@ export interface ProductsPageProps {
   searchParams: {
     limit: string;
     skip: string;
+    q?: string;
   };
 }
 
